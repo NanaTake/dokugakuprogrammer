@@ -18,3 +18,38 @@ print(phrase)
 # 大文字・小文字への一括変換はできる
 print(phrase.upper())
 print(phrase.lower())
+# 頭だけ大文字にすることも可能
+print(phrase.capitalize())
+
+# format（書式化）メソッドを使えば、すでにある文字列に後から文字を挿入できる
+hello = 'Hello, {}. It is {} today.'
+name = 'Mr Ishinomori'
+weather = 'sunny'
+print(hello.format(name, weather))
+# formatの引数にinputを渡すこともできる
+def introduction():
+    """create self introduction.
+    """
+    self_introduction = '{}は{}{}。{}。'
+    first_person = input('一人称：')
+    name = input('名前：')
+    ending = input('語尾：')
+    message = input('一言：')
+    answer = self_introduction.format(first_person, name, ending, message)
+    print(answer)
+introduction()
+
+# split（分割）メソッドでは、渡した文字列の位置で元の文字列が分割される
+dove = 'ぽっぽっぽー、はとぽっぽー'
+answer = dove.split('、')
+print(answer)
+
+# join（結合）メソッドを使うと、初めに指定した文字列を引数の文字列の間に挟んで結合する
+# 文字列を引数にすると、1文字ずつの間に頭の文字列を挟んでいく
+first = 'abc'
+answer = '+'.join(first)
+print(answer)
+# リストを引数にすると、要素の間に初めに指定した文字列を挟んで繋げていく
+words = ['天が呼ぶ', '地が呼ぶ', '人が呼ぶ', '俺の名は...']
+result = '!'.join(words)
+print(result)
