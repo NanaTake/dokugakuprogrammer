@@ -53,3 +53,32 @@ print(answer)
 words = ['天が呼ぶ', '地が呼ぶ', '人が呼ぶ', '俺の名は...']
 result = '!'.join(words)
 print(result)
+
+# strip（空白除去）メソッドで、前後の空白を駆逐可能
+# ただし、文字の間の空白は駆逐範囲外
+manyblanks = '   Nya   nya   nya   '
+manyblanks = manyblanks.strip()
+print (manyblanks)
+print(manyblanks + manyblanks)
+
+# replace（置換）メソッドで、第一引数の文字列を第二引数の文字列に置換する
+hayato = 'ならば...お見せしようッ！！'
+hayato2 = hayato.replace('.', '、')
+print(hayato2)
+
+# index（文字検索）メソッドで、引数の文字のインデックス値を得る
+# 検索結果がない場合の例外処理もセットで書くのがベターだと思うよ
+def index_words(input_word, check_word):
+    """use index
+    
+    Arguments:
+        input_word {[string]} -- [word for index]
+    """
+    try:
+        print(input_word.index(check_word))
+    except:
+        print('Not found...')
+
+input_word = 'kamen-rider'
+check_word = 'n'
+index_words(input_word, check_word)
