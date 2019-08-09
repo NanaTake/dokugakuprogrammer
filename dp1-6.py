@@ -66,7 +66,7 @@ hayato = 'ならば...お見せしようッ！！'
 hayato2 = hayato.replace('.', '、')
 print(hayato2)
 
-# index（文字検索）メソッドで、引数の文字のインデックス値を得る
+# index（文字検索）メソッドで、引数の文字の最初のインデックス値を得る
 # 検索結果がない場合の例外処理もセットで書くのがベターだと思うよ
 def index_words(input_word, check_word):
     """use index
@@ -82,3 +82,30 @@ def index_words(input_word, check_word):
 input_word = 'kamen-rider'
 check_word = 'n'
 index_words(input_word, check_word)
+
+# in（包含）メソッドを使うと、前の文字列が後の文字列に含まれるか判定できる
+# bool型で返ってくる
+result = 'kuuga' in 'kuuga, agito, ryuki'
+print(result)
+# 大文字は別物判定？　→やっぱり別物ですね。
+result = 'Kuuga' in 'kuuga, agito, ryuki'
+print(result)
+
+# Pythonにおいて、エスケープ文字は\
+# ""の中で""を使いたかったら、各"の前に\をつければよろし
+print('ご用のある方は、\'ピーッ\'という発信音の後に')
+# ""と''を併用すればエスケープ文字いらんけどね。
+print('だれだ、だれだ、だれだ〜ッ！？"にゃー"...何だ、ネコか...')
+
+# \nを入れたところで改行されます
+print('だれだッ！？\n"にゃー"\n...何だ、ネコか...')
+
+# スライス...開始位置から終了位置の手前までを取り出す
+heisei = ['kuuga', 'agito', 'ryuki', '555', 'blade']
+print(heisei[0:3])
+phrase = 'Wow--' + 'wow-' * 2 + ' Take your Amazonz!!'
+print(phrase[:14]) #最初から
+print(phrase[14:]) #最後まで
+
+
+# ここからチャレンジ問題
