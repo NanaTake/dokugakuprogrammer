@@ -109,3 +109,36 @@ print(phrase[14:]) #最後まで
 
 
 # ここからチャレンジ問題
+
+# １："CAMUS"を1文字ずつ出力する
+print("CAMUS"[0])
+print("CAMUS"[1])
+print("CAMUS"[2])
+print("CAMUS"[3])
+print("CAMUS"[4])
+# forで反復処理した方がスマートかしらん
+def brandy_call():
+    brandy = "CAMUS"
+    for char in brandy:
+        print(char)
+brandy_call()
+
+# ２：入力させた２つの文字列を挿入した文字列を作る
+def yesterday():
+    """yesterday, what and whom do you write to ?
+    """
+    yesterday = '私は昨日{}を書いて{}に送った。'
+    what = input('何を書いた？：')
+    who = input('誰に送った？：')
+    answer = yesterday.format(what, who)
+    print(answer)
+yesterday()
+
+# ３：先頭の1文字を大文字にする
+phrase = 'wow--' + 'wow-' * 2 + ' Take your Amazonz!!'
+print(phrase.lower())
+print(phrase.capitalize())
+# 1文字目だけ取り出して大文字にしてから残りと繋ぎ直す
+front = phrase[:1].upper()
+answer = front + phrase[1:]
+print(answer)
