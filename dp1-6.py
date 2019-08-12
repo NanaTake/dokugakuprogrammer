@@ -142,3 +142,13 @@ print(phrase.capitalize())
 front = phrase[:1].upper()
 answer = front + phrase[1:]
 print(answer)
+
+# ４：空白で区切ったリストにする
+dove = 'どこで？　誰が？　いつ？'
+answer = dove.split('　')
+print(answer)
+
+# ５：リストの言葉を連結して正常な記述の英文にする
+fox_jump = ['The', 'fox', 'jump', 'over', 'the', 'fence', '.']
+result = ' '.join(fox_jump)
+print(result)
