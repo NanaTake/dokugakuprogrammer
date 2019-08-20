@@ -149,6 +149,45 @@ answer = dove.split('　')
 print(answer)
 
 # ５：リストの言葉を連結して正常な記述の英文にする
+# ただ最後のピリオドの前に空白はいらない
 fox_jump = ['The', 'fox', 'jump', 'over', 'the', 'fence', '.']
 result = ' '.join(fox_jump)
-print(result)
+result2 = result[0:-2] + '.'
+print(result2)
+
+# ６：全ての's'を'$'に置き換える
+chikan = 'It is sunny today, is it ?'
+chikan2 = chikan.replace('s', '$')
+print(chikan2)
+
+# ７：最初の'm'のインデックス値を出力する
+def index_words2(input_word, check_word):
+    """use index
+    
+    Arguments:
+        input_word {[string]} -- [word for index]
+    """
+    try:
+        answer = input_word.index(check_word)
+        print(answer)
+    except:
+        print('Not found...')
+
+input_word = 'kamen-rider'
+check_word = 'm'
+index_words2(input_word, check_word)
+
+# ８：セリフをクォート込みで文字列化する
+print('\'ならば...お見せしようッ！！\'')
+
+# ９：'+'を使うパターンと'*'を使うパターンで'three three three'を作成
+chain2 = 'three ' + 'three ' + 'three'
+print(chain2)
+chain3 = 'three ' * 3
+print(chain3.strip())
+
+# １０：'、'の前までの部分文字列を出力する
+partial = 'ご用のある方は、\'ピーッ\'という発信音の後に'
+print(partial[:7])
+partial2 = partial.split('、')
+print(partial2[0])
