@@ -75,12 +75,15 @@ cha_1()
 
 # リストの要素をcsvファイルに書き出す
 import csv
-def write_csv():
-    """create 'st.csv'
+def write_to_csv(movies):
+    """create 'st_8cha.csv'
     """
-    with open('st.csv', 'w', newline='') as f:
+    with open('st_8cha.csv', 'w', encoding='utf-8', newline='') as f:
         w = csv.writer(f, delimiter=',')
-        w.writerow(['one', 'two', 'three']) 
-        w.writerow(['four', 'five', 'six'])
+        w.writerow(movies[0]) 
+        w.writerow(movies[1])
+        w.writerow(movies[2])
 movies = [['Top Gun', 'Risky Business', 'Minority Report'],['Titanic', 'The Revenant', 'Inception'], ['Training Day', 'Man on Fire', 'Flight']]
-write_csv()
+write_to_csv(movies)
+ja_movies = [['トップガン', 'リスキービジネス', 'マイノリティリポート'],['タイタニック', 'レヴェナント', 'インセプション'], ['トレーニングデイ', 'マンオブファイア', 'フライト']]
+write_to_csv(ja_movies)
