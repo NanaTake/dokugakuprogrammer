@@ -13,3 +13,16 @@ import statistics
 statistics.mean(nums)
 statistics.median(nums)
 statistics.mode(nums)
+
+# keywordモジュールは、引数がPythonのキーワードかをチェックできる
+import keyword
+keyword.iskeyword('for')
+keyword.iskeyword('football')
+
+
+# ここからチャレンジ
+
+# statisticsモジュールで別の関数を使ってみる
+nums = [1, 4, 24, 4, 13, 36, 2, 5, 7]
+import statistics
+statistics.median_grouped(nums)
