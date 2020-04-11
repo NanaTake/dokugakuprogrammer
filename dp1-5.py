@@ -18,16 +18,19 @@ fruit[0]
 fruit[2] = 'melon'
 fruit
 
+# 指定した位置の要素を削除し、値を取得: pop()
 fruit = ['apple', 'orange', 'pear']
 basket = fruit.pop()
 basket
 fruit
 
+# リストの結合
 fruits = ['apple', 'orange', 'pear']
 basket = ['banana', 'melon', 'strawberry']
 fruits_basket = fruits + basket
 print(fruits_basket)
 
+# in
 'orange' in fruits
 'orange' in basket
 'orange' in fruits_basket

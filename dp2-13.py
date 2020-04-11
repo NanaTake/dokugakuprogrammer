@@ -2,6 +2,9 @@
 
 # カプセル化...複数の変数とメソッドをまとめ、外から見えないようにする
 class Data:
+    """__init__    数値をlist型のコンテナnumsに格納している
+       change_data 指定された順の数値を変更する
+    """
     def __init__(self):
         self.nums = [1, 2, 3, 4, 5]
     
